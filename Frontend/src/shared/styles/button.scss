@@ -1,0 +1,23 @@
+.button{
+    outline:none ;
+    background-color: #FF5215;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+a{
+    color:#FF5215;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    scale: 0.90;
+    transform: 0.2s;
+}
