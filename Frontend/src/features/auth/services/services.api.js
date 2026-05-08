@@ -9,7 +9,7 @@ export async function logIn({identifier,password}) {
     
   try {
 
-    const response = await api.post('login',{
+    const response = await api.post('/login',{
         email:identifier,
         username:identifier,
         password})

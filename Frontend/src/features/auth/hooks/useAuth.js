@@ -2,16 +2,20 @@ import { useContext,useState } from "react";
 import { AuthContext } from "../context/auth.context";
 import { logIn,register,logout,getMe } from "../services/services.api";
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
+
 
 export function useAuth(){
     const context = useContext(AuthContext)
     const {user,setUser,loading,setLoading} = context
-
-async function handleLogin({identifier,password}) {
+    const navigate = useNavigate()
+    
+    async function handleLogin({identifier,password}) {
         setLoading(true)
         const response =await logIn({identifier,password})
         setUser(response.user)
         setLoading(false)
+        navigate('/')
     }
 
 async function handleRegister({email,username,password}) {
@@ -36,7 +40,7 @@ async function handleGetme() {
 }
 
 useEffect(()=>{
-handleGetme()
+// handleGetme()
 },[])
 
     return({

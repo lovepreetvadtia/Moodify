@@ -7,7 +7,7 @@ import { songRouter } from './routes/song.routes.js'
 export const app = express()
 app.use(cors({
     credentials:true,
-    origin:"http://localhost:5173"
+    origin:"https://moodify-aj90.onrender.com"
 }))
 app.use(express.json())
 app.use(cookieParser())
