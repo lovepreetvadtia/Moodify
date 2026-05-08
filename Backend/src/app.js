@@ -7,7 +7,7 @@ import { songRouter } from './routes/song.routes.js'
 export const app = express()
 app.use(cors({
     credentials:true,
-    origin:"https://moodify-8wbb.vercel.app/"
+    origin:"https://moodify-8wbb.vercel.app"
 }))
 app.use(express.json())
 app.use(cookieParser())
